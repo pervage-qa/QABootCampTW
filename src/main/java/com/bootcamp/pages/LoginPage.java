@@ -2,9 +2,6 @@ package com.bootcamp.pages;
 
 import com.bootcamp.driver.Driver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
     By welcomeBanner = By.xpath("(//button[contains(@aria-label,'Close Welcome Banner')])[1]");
@@ -14,19 +11,16 @@ public class LoginPage {
     By password = By.id("password");
     By loginButton = By.id("loginButton");
     By error = By.className("error");
-    //WebDriverWait wait = new WebDriverWait(Driver.driver,60) ;
 
     public void clickWelcomeBanner(){
         Driver.driver.findElement(welcomeBanner).click();
     }
 
     public void clickMyAccount(){
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(myAccount));
         Driver.driver.findElement(myAccount).click();
     }
 
     public void clickLogin(){
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(login));
         Driver.driver.findElement(login).click();
     }
 

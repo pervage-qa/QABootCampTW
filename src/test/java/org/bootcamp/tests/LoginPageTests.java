@@ -8,8 +8,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class LoginPageTests extends BaseTest {
-    LoginPage loginPage = new LoginPage();
-    CustomerPage customerPage = new CustomerPage();
+
 
     @Test(enabled = false)
     public void test1() throws InterruptedException {
@@ -22,6 +21,9 @@ public class LoginPageTests extends BaseTest {
     }
     @Test
     public void registerAndLoginWithValidCredentials() throws InterruptedException {
+        LoginPage loginPage = new LoginPage();
+        CustomerPage customerPage = new CustomerPage();
+
         Thread.sleep(1000);
         String password_add = "Hello";
         String email_add = CommonUtils.userName();
